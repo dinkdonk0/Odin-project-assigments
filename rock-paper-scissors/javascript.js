@@ -17,4 +17,24 @@ function getComputerChoice(){
     console.log(computerChoice);
     return computerChoice;
 }
-getComputerChoice();
+
+
+
+function playRound(playerSelection, computerSelection) {
+    console.log("Player chose " + playerSelection + " and the computer chose " + computerSelection)
+    if(playerSelection===computerSelection){
+        return "Even!";
+    }
+    else if((playerSelection==="rock" && computerSelection==="scissors")||
+            (playerSelection==="paper" && computerSelection==="rock")||
+            (playerSelection==="scissors" && computerSelection==="paper")){
+        return "Player won!"
+    }
+    else{
+        return "Computer won!"
+    }
+  }
+   
+  const playerSelection = "rock";
+  const computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection, computerSelection));
