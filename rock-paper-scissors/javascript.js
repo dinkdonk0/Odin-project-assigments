@@ -2,8 +2,8 @@
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
-const playerScore = document.querySelector(".playerScore");
-const computerScore = document.querySelector(".computerScore");
+const playerScore = document.getElementById('playerScore');
+const computerScore = document.getElementById('computerScore');
 
 let playerPoints = 0;
 let computerPoints = 0;
@@ -37,11 +37,13 @@ if(playerChoice===computerChoice){
 else if((playerChoice==="rock" && computerChoice==="scissors")||
       (playerChoice==="paper" && computerChoice==="rock")||
       (playerChoice==="scissors" && computerChoice==="paper")){
-          playerPoints++;
+      playerPoints++;
+      playerScore.textContent = "Player: " + playerPoints;
   console.log("Player won!");
 }
 else{
   computerPoints++;
+  computerScore.textContent = "Computer: " + computerPoints;
   console.log("Computer won!")
 }
 if (playerPoints === 5 || computerPoints === 5) {
