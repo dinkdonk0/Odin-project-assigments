@@ -1,0 +1,39 @@
+.gameContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        padding: 2rem;
+        gap: 2rem;
+        
+}
+.gameContainer img {
+    width: 5rem;
+    height: 5rem;
+    
+  }
+
+.rock{
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+.paper{
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+.scissors{
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
