@@ -5,11 +5,20 @@
         border: 2px solid black;
         padding: 2rem;
         gap: 2rem;
+        border-radius: 1.5rem; /* round the corners */
         
 }
 .gameContainer img {
     width: 5rem;
     height: 5rem;
+    
+    
+  }
+  .gameInfo {
+    position: absolute;
+    top: .5rem; /* adjust this value to position the element */
+    font-weight: bold;
+    
     
   }
 
@@ -20,6 +29,7 @@
     justify-content: center;
     align-items: center;
     border: 2px solid black;
+    border-radius: 1.5rem; /* round the corners */
 }
 .paper{
     padding: 2rem;
@@ -28,6 +38,7 @@
     justify-content: center;
     align-items: center;
     border: 2px solid black;
+    border-radius: 1.5rem; /* round the corners */
 }
 .scissors{
     padding: 2rem;
@@ -36,4 +47,5 @@
     justify-content: center;
     align-items: center;
     border: 2px solid black;
+    border-radius: 1.5rem; /* round the corners */
 }
