@@ -1,3 +1,16 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    color: rgb(231, 159, 65);
+    padding: 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+
 .gameContainer {
         display: flex;
         justify-content: center;
@@ -23,7 +36,7 @@
     
   }
 
-.rock{
+  .rock{
     padding: 2rem;
 
     display: flex;
