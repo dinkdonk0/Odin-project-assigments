@@ -1,98 +1,103 @@
 /* General Styles */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Helvetica Neue', sans-serif;
-  }
-  
-  /* Header Styles */
-  
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #212121;
-    color: rgb(231, 159, 65);
-    padding: 1.2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  /* Main Styles */
-  
-  .main {
-    margin-top: 2rem;
-    padding-bottom: 3rem;
-    background-color: #a8aaad;
-    margin-top: 4rem;
-    text-align: center;
-  }
-  
-  .gameInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .gameInfo h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .gameContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 2rem;
-    background-color: #a8aaad;
-    margin-top: 2rem;
-  }
-  
-  .scoreInfo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .scoreBox {
-    padding: 1rem;
-  }
-  
-  .score {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  /* Button Styles */
-  
-  .rock, .paper, .scissors {
-    padding: 2rem;
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
-    border: 0.15rem solid black;
-    border-radius: 1.5rem; /* round the corners */
-    background-color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .rock:hover,
-  .paper:hover,
-  .scissors:hover {
-    background-color: #b9b4b4;
-  }
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Helvetica Neue', sans-serif;
+background-color: #58b19f;
+}
+
+/* Header Styles */
+
+.header {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #3d3b3c;
+color: #ffffff;
+padding: 1.2rem;
+font-size: 1.5rem;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+/* Main Styles */
+
+.main {
+margin-top: 2rem;
+padding-bottom: 3rem;
+background-color: #e6e6e6;
+margin-top: 4rem;
+text-align: center;
+}
+.main img{
+width: 5rem;
+height: 5rem;
+}
+
+.gameInfo {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+margin-top: 2rem;
+margin-bottom: 1rem;
+}
+
+.gameInfo h2 {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 1rem;
+}
+
+.gameContainer {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 2rem;
+gap: 2rem;
+background-color: #e6e6e6;
+margin-top: 2rem;
+}
+
+.scoreInfo {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.scoreBox {
+padding: 1rem;
+}
+
+.score {
+margin: 0;
+font-size: 2rem;
+font-weight: bold;
+}
+
+/* Button Styles */
+
+.rock, .paper, .scissors {
+padding: 2rem;
+display: flexbox;
+justify-content: center;
+align-items: center;
+border: 0.15rem solid black;
+border-radius: 1.5rem; /* round the corners */
+background-color: #ffffff;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out;
+}
+
+.rock:hover,
+.paper:hover,
+.scissors:hover {
+background-color: #c5e5d5;
+}
