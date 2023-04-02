@@ -1,75 +1,98 @@
-.header{
+/* General Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  /* Header Styles */
+  
+  .header {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #212121;
     color: rgb(231, 159, 65);
     padding: 1.2rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    font-family: 'Helvetica Neue', sans-serif;
-}
-
-
-.main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 0.15rem solid black;
-        padding: 2rem;
-        gap: 2rem;
-        border-radius: 1.5rem; /* round the corners */
-        background-color: #ECEFF4;
-        
-}
-.gameContainer img {
-    width: 5rem;
-    height: 5rem;
-    
-    
+    text-transform: uppercase;
   }
-  .gameInfo {
-    position: absolute;
-    top: 1rem; /* adjust this value to position the element */
-    font-weight: bold;
-    
-    
-}
-
-.rock{
-  padding: 2rem;
-
-  display: flexbox;
-  justify-content: center;
-  align-items: center;
-  border: 0.15rem solid black;
-  border-radius: 1.5rem; /* round the corners */
-  background-color: #ffffff;
   
-}
-.paper{
-  padding: 2rem;
-
-  display: flexbox;
-  justify-content: center;
-  align-items: center;
-  border: 0.15rem solid black;
-  border-radius: 1.5rem; /* round the corners */
-  background-color: #ffffff;
-}
-.scissors{
-  padding: 2rem;
-
-  display: flexbox;
-  justify-content: center;
-  align-items: center;
-  border: 0.15rem solid black;
-  border-radius: 1.5rem; /* round the corners */
-  background-color: #ffffff;
-}
-.rock:hover,
-.paper:hover,
-.scissors:hover {
-  background-color: #dddddd;
-  /* replace #dddddd with the desired color */
-}
+  /* Main Styles */
+  
+  .main {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+    background-color: #a8aaad;
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .gameInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .gameInfo h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #a8aaad;
+    margin-top: 2rem;
+  }
+  
+  .scoreInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scoreBox {
+    padding: 1rem;
+  }
+  
+  .score {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Button Styles */
+  
+  .rock, .paper, .scissors {
+    padding: 2rem;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    border: 0.15rem solid black;
+    border-radius: 1.5rem; /* round the corners */
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .rock:hover,
+  .paper:hover,
+  .scissors:hover {
+    background-color: #b9b4b4;
+  }
