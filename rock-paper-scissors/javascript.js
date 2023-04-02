@@ -2,7 +2,10 @@
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
-
+let playerPoints = 0;
+let computerPoints = 0;
+let roundWinner = '';
+/*
 rock.addEventListener('click', () => {
   alert('You clicked on the rock element!');
 });
@@ -14,7 +17,7 @@ paper.addEventListener('click', () => {
 scissors.addEventListener('click', () => {
   alert('You clicked on the scissors element!');
 });
-
+*/
 
 //Shouldnt need editing?
 function GetComputerChoice(){
@@ -42,30 +45,32 @@ take the word rock, paper or scissors based on which button pressed
 function PlayerSelection() {
     let playerChoice;
   
-    const rock = document.querySelector('.rock');
+    //const rock = document.querySelector('.rock');
     rock.addEventListener('click', () => {
       playerChoice = 'rock';
       console.log(playerChoice);
+      return playerChoice
     });
   
-    const paper = document.querySelector('.paper');
+    //const paper = document.querySelector('.paper');
     paper.addEventListener('click', () => {
       playerChoice = 'paper';
       console.log(playerChoice);
+      return playerChoice
     });
   
-    const scissors = document.querySelector('.scissors');
+    //const scissors = document.querySelector('.scissors');
     scissors.addEventListener('click', () => {
       playerChoice = 'scissors';
       console.log(playerChoice);
+      return playerChoice
     });
   
-    return playerChoice;
+    return playerChoice
   }
 
 
-let playerPoints = 0;
-let computerPoints = 0;
+
 
 function PlayRound(playerChoice, computerSelection) {
     console.log("Player chose " + playerChoice + " and the computer chose " + computerSelection)
@@ -84,30 +89,3 @@ function PlayRound(playerChoice, computerSelection) {
     }
   }
 
-
-
-  function Game(){
-  
-    while (true){
-        if(playerPoints>4||computerPoints>4){
-            break;
-        }
-        
-        let playerChoice = PlayerSelection();
-        if(playerChoice!=="rock" && playerChoice!=="paper" && playerChoice!=="scissors"){
-            break;
-            
-        }
-        else{
-        let computerSelection = GetComputerChoice();
-        console.log(PlayRound(playerChoice, computerSelection));
-        console.log("The score is currently: " + playerPoints + " to " + computerPoints);
-        }
-        
-        
-    }
-    return "Game ended with a score of " + playerPoints + " to " + computerPoints;
-    }
-  
- 
-//console.log(Game());
