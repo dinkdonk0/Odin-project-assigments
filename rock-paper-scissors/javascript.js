@@ -1,6 +1,11 @@
 console.log("Rock paper scissors");
 
+const rock = document.querySelector('.rock');
 
+rock.addEventListener('click', () => {
+  alert('You clicked on the rock element!');
+});
+console.log(rock); // Check if the rock variable is null
 
 function GetComputerChoice(){
 
