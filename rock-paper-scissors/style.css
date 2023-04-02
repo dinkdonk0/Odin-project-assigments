@@ -17,7 +17,7 @@
   }
   .gameInfo {
     position: absolute;
-    top: .5rem; /* adjust this value to position the element */
+    top: 1rem; /* adjust this value to position the element */
     font-weight: bold;
     
     
