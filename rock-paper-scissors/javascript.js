@@ -1,6 +1,7 @@
 console.log("Rock paper scissors");
 
 
+
 function GetComputerChoice(){
 
     const rndInt = Math.floor(Math.random() * 3) + 1
