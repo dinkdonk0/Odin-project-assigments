@@ -23,32 +23,21 @@ function GetComputerChoice(){
     return computerChoice;
 }
 
-function PlayerSelection() {
-    let playerChoice;
+function PlayRound(playerChoice){
+const computerChoice = GetComputerChoice();
+console.log('Player: ' + playerChoice);
+console.log('Computer: ' + computerChoice);
 
-    rock.addEventListener('click', () => {
-      playerChoice = 'rock';
-      console.log(playerChoice);
-      return playerChoice
-    });
-  
-    
-    paper.addEventListener('click', () => {
-      playerChoice = 'paper';
-      console.log(playerChoice);
-      return playerChoice
-    });
-  
-   
-    scissors.addEventListener('click', () => {
-      playerChoice = 'scissors';
-      console.log(playerChoice);
-      return playerChoice
-    });
-  
-    return playerChoice
-  }
 
+
+
+
+
+}
+
+
+
+/*
 function runGame(){
     while(true){
         if(playerPoints === 5 || computerPoints === 5){
@@ -59,7 +48,7 @@ function runGame(){
 
     }
 }
-
+*/
 
 
 /*
