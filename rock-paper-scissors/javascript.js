@@ -28,27 +28,52 @@ const computerChoice = GetComputerChoice();
 console.log('Player: ' + playerChoice);
 console.log('Computer: ' + computerChoice);
 
-
-
-
-
+if(playerChoice===computerChoice){
+  console.log("draw!");
+}
+else if((playerChoice==="rock" && computerChoice==="scissors")||
+      (playerChoice==="paper" && computerChoice==="rock")||
+      (playerChoice==="scissors" && computerChoice==="paper")){
+          playerPoints++;
+  console.log("Player won!");
+}
+else{
+  computerPoints++;
+  console.log("Computer won!")
+}
+if (playerPoints === 5 || computerPoints === 5) {
+  console.log('Game Over!');
+  restartGame(); //needs building
+}
 
 }
 
+//needs building
+function restartGame(){
 
-
-/*
-function runGame(){
-    while(true){
-        if(playerPoints === 5 || computerPoints === 5){
-            console.log("someone won!");
-            break;
-        }
-
-
-    }
 }
-*/
+
+//causes playround to fire on click
+rock.addEventListener('click', () => {
+  PlayRound("rock");
+});
+paper.addEventListener('click', () => {
+  PlayRound("paper");
+});
+scissors.addEventListener('click', () => {
+  PlayRound("scissors");
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
