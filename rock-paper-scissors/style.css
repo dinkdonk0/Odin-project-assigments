@@ -11,7 +11,7 @@
 }
 
 
-.gameContainer {
+.main {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -39,7 +39,7 @@
 .rock{
   padding: 2rem;
 
-  display: flex;
+  display: flexbox;
   justify-content: center;
   align-items: center;
   border: 0.15rem solid black;
@@ -50,7 +50,7 @@
 .paper{
   padding: 2rem;
 
-  display: flex;
+  display: flexbox;
   justify-content: center;
   align-items: center;
   border: 0.15rem solid black;
@@ -60,7 +60,7 @@
 .scissors{
   padding: 2rem;
 
-  display: flex;
+  display: flexbox;
   justify-content: center;
   align-items: center;
   border: 0.15rem solid black;
