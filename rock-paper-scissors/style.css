@@ -6,6 +6,7 @@
         padding: 2rem;
         gap: 2rem;
         border-radius: 1.5rem; /* round the corners */
+        background-color: #ECEFF4;
         
 }
 .gameContainer img {
@@ -30,6 +31,7 @@
     align-items: center;
     border: 0.15rem solid black;
     border-radius: 1.5rem; /* round the corners */
+    background-color: #ffffff;
 }
 .paper{
     padding: 2rem;
@@ -39,6 +41,7 @@
     align-items: center;
     border: 0.15rem solid black;
     border-radius: 1.5rem; /* round the corners */
+    background-color: #ffffff;
 }
 .scissors{
     padding: 2rem;
@@ -48,4 +51,5 @@
     align-items: center;
     border: 0.15rem solid black;
     border-radius: 1.5rem; /* round the corners */
+    background-color: #ffffff;
 }

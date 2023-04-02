@@ -1,11 +1,21 @@
 console.log("Rock paper scissors");
 
 const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
 
 rock.addEventListener('click', () => {
   alert('You clicked on the rock element!');
 });
-console.log(rock); // Check if the rock variable is null
+
+paper.addEventListener('click', () => {
+  alert('You clicked on the paper element!');
+});
+
+scissors.addEventListener('click', () => {
+  alert('You clicked on the scissors element!');
+});
+
 
 function GetComputerChoice(){
 
@@ -75,4 +85,4 @@ function PlayRound(playerChoice, computerSelection) {
     }
   
  
-console.log(Game());
+//console.log(Game());
