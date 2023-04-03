@@ -55,6 +55,16 @@ font-weight: bold;
 margin-bottom: 1rem;
 }
 
+.temp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+
 .gameContainer {
 display: flex;
 justify-content: center;
