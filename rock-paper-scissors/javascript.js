@@ -2,7 +2,7 @@
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
-const restart = document.getElementById("restartGame");
+const restart = document.querySelector(".restartGame");
 const playerScore = document.getElementById('playerScore');
 const computerScore = document.getElementById('computerScore');
 

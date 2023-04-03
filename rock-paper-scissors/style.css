@@ -27,6 +27,7 @@ text-transform: uppercase;
 
 /* Main Styles */
 
+
 .main {
 margin-top: 2rem;
 padding-bottom: 3rem;
@@ -94,8 +95,10 @@ font-weight: bold;
 
 /* Button Styles */
 
-.rock, .paper, .scissors {
+.rock, .paper, .scissors, .restartGame {
 padding: 2rem;
+font-size: 1rem;
+font-weight: bold;
 display: flexbox;
 justify-content: center;
 align-items: center;
@@ -108,6 +111,8 @@ transition: background-color 0.2s ease-in-out;
 
 .rock:hover,
 .paper:hover,
-.scissors:hover {
+.scissors:hover,
+.restartGame:hover {
 background-color: #c5e5d5;
 }
+
