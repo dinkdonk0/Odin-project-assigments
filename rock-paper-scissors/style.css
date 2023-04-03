@@ -134,3 +134,10 @@ background-color: #c5e5d5;
     margin: 0;
     padding: .5rem;
   }
+
+
+  @media screen and (max-width: 480px) {
+    .footer {
+      display: none;
+    }
+  }
