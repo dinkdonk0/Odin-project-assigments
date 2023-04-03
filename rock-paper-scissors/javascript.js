@@ -58,8 +58,8 @@ if (playerPoints === 5 || computerPoints === 5) {
 function restartGame(){
   playerPoints=0;
   computerPoints=0;
-  playerScore=0;
-
+  computerScore.textContent = "Computer: " + computerPoints;
+  playerScore.textContent = "Player: " + playerPoints;
 }
 
 //causes playround to fire on click
