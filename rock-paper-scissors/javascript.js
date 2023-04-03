@@ -19,15 +19,15 @@ function GetComputerChoice(){
     let computerChoice = "";
     if(rndInt==1){
         computerChoice = "rock";
-        computerImage.src = "rock.png";
+        computerImage.src = "/images/rock.png";
     }
     if(rndInt==2){
         computerChoice = "paper";
-        computerImage.src = "paper.png";
+        computerImage.src = "/images/paper.png";
     }
     if(rndInt==3){
         computerChoice = "scissors";
-        computerImage.src = "scissors.png";
+        computerImage.src = "/images/scissors.png";
     }
     return computerChoice;
 }
@@ -58,8 +58,8 @@ function restartGame(){
   computerPoints=0;
   computerScore.textContent = "Computer: " + computerPoints;
   playerScore.textContent = "Player: " + playerPoints;
-  playerImage.src="question.png";
-  computerImage.src="question.png";
+  playerImage.src="/images/question.png";
+  computerImage.src="/images/question.png";
 }
 
 
@@ -70,21 +70,21 @@ function restartGame(){
       return null;
     }
     PlayRound("rock");
-    playerImage.src = "rock.png"
+    playerImage.src = "/images/rock.png"
   });
   paper.addEventListener('click', () => {
     if(playerPoints === 5 || computerPoints === 5){
       return null;
     }
     PlayRound("paper");
-    playerImage.src = "paper.png"
+    playerImage.src = "/images/paper.png"
   });
   scissors.addEventListener('click', () => {
     if(playerPoints === 5 || computerPoints === 5){
       return null;
     }
     PlayRound("scissors");
-    playerImage.src = "scissors.png"
+    playerImage.src = "/images/scissors.png"
   });
 
 
