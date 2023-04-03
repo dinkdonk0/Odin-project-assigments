@@ -6,6 +6,9 @@ const restart = document.getElementById("restartGame");
 const playerScore = document.getElementById('playerScore');
 const computerScore = document.getElementById('computerScore');
 
+let playerImage = document.getElementById("playerImage");
+let computerImage = document.getElementById("computerImage");
+
 let playerPoints = 0;
 let computerPoints = 0;
 
@@ -16,12 +19,15 @@ function GetComputerChoice(){
     let computerChoice = "";
     if(rndInt==1){
         computerChoice = "rock";
+        computerImage.src = "rock.png";
     }
     if(rndInt==2){
         computerChoice = "paper";
+        computerImage.src = "paper.png";
     }
     if(rndInt==3){
         computerChoice = "scissors";
+        computerImage.src = "scissors.png";
     }
     console.log(computerChoice);
     return computerChoice;
@@ -65,12 +71,15 @@ function restartGame(){
 //causes playround to fire on click
 rock.addEventListener('click', () => {
   PlayRound("rock");
+  playerImage.src = "rock.png"
 });
 paper.addEventListener('click', () => {
   PlayRound("paper");
+  playerImage.src = "paper.png"
 });
 scissors.addEventListener('click', () => {
   PlayRound("scissors");
+  playerImage.src = "scissors.png"
 });
 
 //restarts game on click
