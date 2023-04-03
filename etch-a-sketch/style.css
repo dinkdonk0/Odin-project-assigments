@@ -42,11 +42,11 @@ html, body {
   }
   .mainContainer div {
     background-color: rgb(240, 232, 232);
-    border: 0.1rem solid black;
+    border: 0.01rem solid rgb(209, 202, 202);
   }
 
 
- .reset{
+ .buttons{
     outline: 0;
     display: inline-block;
     font-weight: 400;

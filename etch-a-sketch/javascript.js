@@ -1,5 +1,5 @@
 const mainContainer = document.querySelector(".mainContainer");
-const resetButton = document.querySelector(".reset");
+const resetButton = document.querySelector("#reset");
 let tileBlocks = []; //array that all tileblocks will go in to
 
 //generates the divs used as a grid
