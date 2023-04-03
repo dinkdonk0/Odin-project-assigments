@@ -29,16 +29,14 @@ function GetComputerChoice(){
         computerChoice = "scissors";
         computerImage.src = "scissors.png";
     }
-    console.log(computerChoice);
     return computerChoice;
 }
 
 function PlayRound(playerChoice){
 const computerChoice = GetComputerChoice();
-console.log('Player: ' + playerChoice);
-console.log('Computer: ' + computerChoice);
 
 if(playerChoice===computerChoice){
+  //needs rework, need to paint "draw" on screen
   console.log("draw!");
 }
 else if((playerChoice==="rock" && computerChoice==="scissors")||
@@ -46,16 +44,10 @@ else if((playerChoice==="rock" && computerChoice==="scissors")||
       (playerChoice==="scissors" && computerChoice==="paper")){
       playerPoints++;
       playerScore.textContent = "Player: " + playerPoints;
-  console.log("Player won!");
 }
 else{
   computerPoints++;
   computerScore.textContent = "Computer: " + computerPoints;
-  console.log("Computer won!")
-}
-if (playerPoints === 5 || computerPoints === 5) {
-  console.log('Game Over!');
-  //restartGame(); //needs building
 }
 
 }
