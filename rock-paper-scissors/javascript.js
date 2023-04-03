@@ -55,7 +55,7 @@ else{
 }
 if (playerPoints === 5 || computerPoints === 5) {
   console.log('Game Over!');
-  restartGame(); //needs building
+  //restartGame(); //needs building
 }
 
 }
@@ -66,21 +66,36 @@ function restartGame(){
   computerPoints=0;
   computerScore.textContent = "Computer: " + computerPoints;
   playerScore.textContent = "Player: " + playerPoints;
+  playerImage.src="question.png";
+  computerImage.src="question.png";
 }
 
+
 //causes playround to fire on click
-rock.addEventListener('click', () => {
-  PlayRound("rock");
-  playerImage.src = "rock.png"
-});
-paper.addEventListener('click', () => {
-  PlayRound("paper");
-  playerImage.src = "paper.png"
-});
-scissors.addEventListener('click', () => {
-  PlayRound("scissors");
-  playerImage.src = "scissors.png"
-});
+
+  rock.addEventListener('click', () => {
+    if(playerPoints === 5 || computerPoints === 5){
+      return null;
+    }
+    PlayRound("rock");
+    playerImage.src = "rock.png"
+  });
+  paper.addEventListener('click', () => {
+    if(playerPoints === 5 || computerPoints === 5){
+      return null;
+    }
+    PlayRound("paper");
+    playerImage.src = "paper.png"
+  });
+  scissors.addEventListener('click', () => {
+    if(playerPoints === 5 || computerPoints === 5){
+      return null;
+    }
+    PlayRound("scissors");
+    playerImage.src = "scissors.png"
+  });
+
+
 
 //restarts game on click
 restart.addEventListener("click",() =>{
