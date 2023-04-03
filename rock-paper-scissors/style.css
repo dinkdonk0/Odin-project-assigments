@@ -1,125 +1,122 @@
 /* General Styles */
 
 *{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
-body {
-font-family: 'Helvetica Neue', sans-serif;
-background-color: #58b19f;
-}
-
-/* Header Styles */
-
-.header {
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #3d3b3c;
-color: #ffffff;
-padding: 1.2rem;
-font-size: 1.5rem;
-font-weight: bold;
-text-transform: uppercase;
-}
-
-/* Main Styles */
-
-
-.main {
-margin-top: 2rem;
-padding-bottom: 3rem;
-background-color: #e6e6e6;
-margin-top: 4rem;
-text-align: center;
-}
-.main img{
-width: 5rem;
-height: 5rem;
-}
-
-.gameInfo {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-text-align: center;
-margin-top: 2rem;
-margin-bottom: 2rem;
-}
-
-.gameInfo h2 {
-font-size: 2.5rem;
-font-weight: bold;
-margin-bottom: 1rem;
-}
-
-.temp{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #58b19f;
+  }
+  
+  /* Header Styles */
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d3b3c;
+    color: #ffffff;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Main Styles */
+  
+  .main {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+    background-color: #e6e6e6;
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .main img {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .gameInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .gameInfo h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .temp {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    
-}
-
-
-.gameContainer {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 2rem;
-gap: 2rem;
-background-color: #e6e6e6;
-margin-top: 2rem;
-}
-
-.scoreInfo {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-}
-
-.scoreBox {
-padding: 1rem;
-}
-
-.score {
-margin: 0;
-font-size: 2rem;
-font-weight: bold;
-}
-
-/* Button Styles */
-
-.rock, .paper, .scissors, .restartGame {
-padding: 2rem;
-font-size: 1rem;
-font-weight: bold;
-display: flexbox;
-justify-content: center;
-align-items: center;
-border: 0.15rem solid black;
-border-radius: 1.5rem; /* round the corners */
-background-color: #ffffff;
-cursor: pointer;
-transition: background-color 0.2s ease-in-out;
-}
-
-.rock:hover,
-.paper:hover,
-.scissors:hover,
-.restartGame:hover {
-background-color: #c5e5d5;
-}
-
-
-/* Footer Styles */
-
-.footer {
+  }
+  
+  .gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #e6e6e6;
+    margin-top: 2rem;
+  }
+  
+  .scoreInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scoreBox {
+    padding: 1rem;
+  }
+  
+  .score {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Button Styles */
+  
+  .rock, .paper, .scissors, .restartGame {
+    padding: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    border: 0.15rem solid black;
+    border-radius: 1.5rem; /* round the corners */
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .rock:hover,
+  .paper:hover,
+  .scissors:hover,
+  .restartGame:hover {
+    background-color: #c5e5d5;
+  }
+  
+  /* Footer Styles */
+  
+  .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -134,10 +131,27 @@ background-color: #c5e5d5;
     margin: 0;
     padding: .5rem;
   }
-
-
-  @media screen and (max-width: 480px) {
-    .footer {
-      display: none;
+  
+  /* Mobile Styles */
+  
+  @media screen and (max-width: 767px) {
+    .header {
+      font-size: 1rem;
     }
-  }
+  
+    .gameInfo h2 {
+      font-size: 2rem;
+    }
+  
+    .temp {
+      font-size: 1.2rem;
+    }
+  
+    .score {
+      font-size: 1.5rem;
+    }
+  
+    .rock, .paper, .scissors, .restartGame {
+      font-size: 0.8rem;
+    }
+}
