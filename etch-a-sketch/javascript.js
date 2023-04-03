@@ -23,11 +23,23 @@ function styleGrid(){
 generateTile();
 styleGrid();
 
+//changed from mouseover to "drag and move"
+let isMouseDown = false;
+for (let i = 0; i < tileBlocks.length; i++) {
+  tileBlocks[i].addEventListener("mousedown", function () {
+    isMouseDown = true;
+    this.style.backgroundColor = "blue";
+  });
 
-for(let i = 0; i < tileBlocks.length; i++){
-    tileBlocks[i].addEventListener("mouseover", function(){
-        this.style.backgroundColor = "blue";
-    });
+  tileBlocks[i].addEventListener("mouseup", function () {
+    isMouseDown = false;
+  });
+
+  tileBlocks[i].addEventListener("mousemove", function () {
+    if (isMouseDown) {
+      this.style.backgroundColor = "blue";
+    }
+  });
 }
 
 resetButton.addEventListener("click", function(){
