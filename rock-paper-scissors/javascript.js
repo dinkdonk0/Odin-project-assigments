@@ -2,9 +2,10 @@
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
-const playerScore = document.getElementById('playerScore');
-const computerScore = document.getElementById('computerScore');
+const restart = document.getElementById("restartGame");
 
+let playerScore = document.getElementById('playerScore');
+let computerScore = document.getElementById('computerScore');
 let playerPoints = 0;
 let computerPoints = 0;
 
@@ -55,6 +56,9 @@ if (playerPoints === 5 || computerPoints === 5) {
 
 //needs building
 function restartGame(){
+  playerPoints=0;
+  computerPoints=0;
+  //playerScore="0";
 
 }
 
@@ -67,6 +71,11 @@ paper.addEventListener('click', () => {
 });
 scissors.addEventListener('click', () => {
   PlayRound("scissors");
+});
+
+//restarts game on click
+restart.addEventListener("click",() =>{
+  restartGame()
 });
 
 
