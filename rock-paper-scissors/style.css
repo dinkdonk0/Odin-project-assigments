@@ -109,8 +109,8 @@ body {
 .rock img,
 .paper img,
 .scissors img {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
 }
 
 .rock:hover,
@@ -139,19 +139,22 @@ body {
 
 /* Mobile Styles */
 @media screen and (max-width: 767px) {
-    .header {
-        font-size: 1rem;
+    /* ... other mobile styles ... */
+    
+    .rock, .paper, .scissors, .restartGame {
+      padding: 1rem;
+      font-size: 0.8rem;
     }
-
-    .gameInfo h2 {
-        font-size: 2rem;
+  
+    .rock img, .paper img, .scissors img {
+      width: 2.5rem;
+      height: 2.5rem;
     }
-
-    .temp {
-        font-size: 1.2rem;
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
     }
-
-    .score {
-        font-size: 1.5rem;
-    }
-}
+   
+  }
