@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(148, 199, 228);
+  }
+  
+  header, footer {
+    flex: 1;
+  }
+  
+  main {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    height: 40rem;
+    background-color: rgb(243, 195, 124);
+    border-radius: 2rem;
+  }
+  
+  .mainContainer {
+    background-color: rgb(255, 255, 255);
+    width: 32rem;
+    height: 32rem;
+    align-self: center;
+    border-radius: 0.5rem;
+    display: grid;
+  }
+  .mainContainer div {
+    background-color: rgb(240, 232, 232);
+    border: 0.15rem solid black;
+    
+  }
