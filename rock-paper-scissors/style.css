@@ -154,4 +154,8 @@
     .rock, .paper, .scissors, .restartGame {
       font-size: 0.8rem;
     }
+    .footer {
+        display: none;
+      }
+    
 }
