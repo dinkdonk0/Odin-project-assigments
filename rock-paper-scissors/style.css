@@ -116,3 +116,27 @@ transition: background-color 0.2s ease-in-out;
 background-color: #c5e5d5;
 }
 
+
+/* Footer Styles */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #3d3b3c;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .footer p {
+    margin: 0;
+    padding: .5rem;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .footer {
+      font-size: 1rem;
+    }
+  }
