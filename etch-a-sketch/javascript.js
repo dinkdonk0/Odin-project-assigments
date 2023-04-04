@@ -1,5 +1,11 @@
 const mainContainer = document.querySelector(".mainContainer");
 const resetButton = document.querySelector("#reset");
+const colorPicker = document.querySelector("#colorPicker");
+
+
+//colorPicker.setAttribute("type", "color");
+
+
 let tileBlocks = []; //array that all tileblocks will go in to
 
 //generates the divs used as a grid
@@ -29,7 +35,7 @@ let isMouseDown = false;
 for (let i = 0; i < tileBlocks.length; i++) {
   tileBlocks[i].addEventListener("mousedown", function () {
     isMouseDown = true;
-    this.style.backgroundColor = "blue";
+    this.style.backgroundColor = colorPicker.value;
   });
 
   tileBlocks[i].addEventListener("mouseup", function () {
@@ -38,10 +44,18 @@ for (let i = 0; i < tileBlocks.length; i++) {
 
   tileBlocks[i].addEventListener("mousemove", function () {
     if (isMouseDown) {
-      this.style.backgroundColor = "blue";
+      this.style.backgroundColor = colorPicker.value;
     }
   });
 }
+
+
+//lets user paint with chosen color.
+colorPicker.addEventListener("click", function(){
+  for(let i = 0; i < tileBlocks.length; i++){
+    this.style.backgroundColor = colorPicker.value;
+}
+})
 
 //resets the color
 resetButton.addEventListener("click", function(){
