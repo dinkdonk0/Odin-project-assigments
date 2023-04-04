@@ -1,11 +1,8 @@
 const mainContainer = document.querySelector(".mainContainer");
 const resetButton = document.querySelector("#reset");
 const colorPicker = document.querySelector("#colorPicker");
-
 const gridRange = document.querySelector(".slider");
-
-
-//colorPicker.setAttribute("type", "color");
+const eraser = document.querySelector("#eraser");
 
 
 let tileBlocks = []; //array that all tileblocks will go in to
@@ -78,6 +75,9 @@ gridRange.addEventListener("input", function(){
   generateTile();
   styleGrid(); 
   attachPaintingEventListeners(tileBlock);
+  for(let i = 0; i < tileBlocks.length; i++){
+    tileBlocks[i].style.backgroundColor = "white";
+}
 })
 
 function attachPaintingEventListeners(tileBlock) {
