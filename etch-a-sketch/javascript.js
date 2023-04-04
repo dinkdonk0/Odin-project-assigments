@@ -9,6 +9,7 @@ let tileBlocks = []; //array that all tileblocks will go in to
 let currentColor = colorPicker.value;
 let discoMode = false;
 
+
 //run functions
 generateTile();
 styleGrid();
@@ -35,6 +36,7 @@ function styleGrid(){
 }
 
 
+//generates random colors for discomode
 function getRandomColor(){
   const letters = "0123456789ABCDEF";
   let color = "#";
@@ -44,9 +46,6 @@ function getRandomColor(){
       console.log(color)
   return color;
 }
-
-
-//everything below here handles button/etc interactions
 
 //handles "drag and move"
 let isMouseDown = false;
@@ -99,6 +98,7 @@ gridRange.addEventListener("input", function(){
   
 })
 
+//paints the chosen color from colorPicker, or uses discomode
 function attachPaintingEventListeners(tileBlock) {
 
   tileBlock.addEventListener("mousedown", function () {
@@ -124,6 +124,7 @@ function attachPaintingEventListeners(tileBlock) {
   });
 }
 
+//changes color to white, used as eraser
 eraser.addEventListener("click", function () {
   discoMode = false;
   disco.value = "off";
