@@ -4,8 +4,8 @@ const colorPicker = document.querySelector("#colorPicker");
 const gridRange = document.querySelector(".slider");
 const eraser = document.querySelector("#eraser");
 
-
 let tileBlocks = []; //array that all tileblocks will go in to
+let currentColor = colorPicker.value;
 
 //generates the divs used as a grid
 function generateTile(){
@@ -16,6 +16,8 @@ function generateTile(){
         mainContainer.appendChild(tileBlock); 
         tileBlocks.push(tileBlock); 
         attachPaintingEventListeners(tileBlock);
+        tileBlocks[i].style.backgroundColor = "white";
+      
     }
 }
 
@@ -78,6 +80,7 @@ gridRange.addEventListener("input", function(){
   for(let i = 0; i < tileBlocks.length; i++){
     tileBlocks[i].style.backgroundColor = "white";
 }
+  
 })
 
 function attachPaintingEventListeners(tileBlock) {
@@ -97,3 +100,8 @@ function attachPaintingEventListeners(tileBlock) {
     }
   });
 }
+
+
+eraser.addEventListener("click", function () {
+  colorPicker.value = "#ffffff";
+});
