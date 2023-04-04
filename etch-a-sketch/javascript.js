@@ -7,6 +7,12 @@ const disco = document.querySelector("#disco");
 
 let tileBlocks = []; //array that all tileblocks will go in to
 let currentColor = colorPicker.value;
+let discoMode = false;
+
+//run functions
+generateTile();
+styleGrid();
+
 
 //generates the divs used as a grid
 function generateTile(){
@@ -29,9 +35,15 @@ function styleGrid(){
 }
 
 
-//run functions
-generateTile();
-styleGrid();
+function getRandomColor(){
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+      }
+      console.log(color)
+  return color;
+}
 
 
 //everything below here handles button/etc interactions
@@ -88,7 +100,12 @@ function attachPaintingEventListeners(tileBlock) {
 
   tileBlock.addEventListener("mousedown", function () {
     isMouseDown = true;
-    this.style.backgroundColor = colorPicker.value;
+    if(discoMode){
+      this.style.backgroundColor = getRandomColor();
+    }else{
+      this.style.backgroundColor = colorPicker.value;
+    }
+    
   });
 
   tileBlock.addEventListener("mouseup", function () {
@@ -96,13 +113,27 @@ function attachPaintingEventListeners(tileBlock) {
   });
 
   tileBlock.addEventListener("mousemove", function () {
-    if (isMouseDown) {
+    if(discoMode){
+      this.style.backgroundColor = getRandomColor();
+    }else{
       this.style.backgroundColor = colorPicker.value;
     }
   });
 }
 
-
 eraser.addEventListener("click", function () {
   colorPicker.value = "#ffffff";
 });
+
+//discomode toggle
+disco.addEventListener("click", function(){
+  discoMode = !discoMode;
+  if (disco.value == "off") {
+    disco.value = "of";
+    disco.innerHTML = "Disco mode on";
+}
+else {
+  disco.value = "off";
+  disco.innerHTML = "Disco mode off ";
+}
+})
