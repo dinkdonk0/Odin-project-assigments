@@ -69,6 +69,9 @@ for (let i = 0; i < tileBlocks.length; i++) {
 
 //lets user paint with chosen color.
 colorPicker.addEventListener("click", function(){
+  discoMode = false;
+  disco.value = "off";
+  disco.innerHTML = "Disco mode off ";
   for(let i = 0; i < tileBlocks.length; i++){
     this.style.backgroundColor = colorPicker.value;
 }
