@@ -3,6 +3,7 @@ const resetButton = document.querySelector("#reset");
 const colorPicker = document.querySelector("#colorPicker");
 const gridRange = document.querySelector(".slider");
 const eraser = document.querySelector("#eraser");
+const disco = document.querySelector("#disco");
 
 let tileBlocks = []; //array that all tileblocks will go in to
 let currentColor = colorPicker.value;
