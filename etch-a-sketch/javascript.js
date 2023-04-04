@@ -77,6 +77,9 @@ colorPicker.addEventListener("click", function(){
 
 //resets the color
 resetButton.addEventListener("click", function(){
+  discoMode = false;
+  disco.value = "off";
+  disco.innerHTML = "Disco mode off ";
     for(let i = 0; i < tileBlocks.length; i++){
         tileBlocks[i].style.backgroundColor = "white";
     }
@@ -122,6 +125,9 @@ function attachPaintingEventListeners(tileBlock) {
 }
 
 eraser.addEventListener("click", function () {
+  discoMode = false;
+  disco.value = "off";
+  disco.innerHTML = "Disco mode off ";
   colorPicker.value = "#ffffff";
 });
 
