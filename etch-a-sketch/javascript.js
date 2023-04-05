@@ -105,23 +105,24 @@ function attachPaintingEventListeners(tileBlock) {
 
   tileBlock.addEventListener("mousedown", function () {
     isMouseDown = true;
-    if(discoMode){
+    if (discoMode) {
       this.style.backgroundColor = getRandomColor();
-    }else{
+    } else {
       this.style.backgroundColor = colorPicker.value;
     }
-    
   });
 
-  tileBlock.addEventListener("mouseup", function () {
+  document.addEventListener("mouseup", function () {
     isMouseDown = false;
   });
 
-  tileBlock.addEventListener("mousemove", function () {
-    if(discoMode){
-      this.style.backgroundColor = getRandomColor();
-    }else{
-      this.style.backgroundColor = colorPicker.value;
+  tileBlock.addEventListener("mousemove", function (event) {
+    if (isMouseDown) {
+      if (discoMode) {
+        this.style.backgroundColor = getRandomColor();
+      } else {
+        this.style.backgroundColor = colorPicker.value;
+      }
     }
   });
 }
