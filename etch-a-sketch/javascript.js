@@ -43,34 +43,27 @@ function getRandomColor(){
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
       }
+      console.log(color)
   return color;
 }
 
 //handles "drag and move"
 let isMouseDown = false;
 for (let i = 0; i < tileBlocks.length; i++) {
+  attachPaintingEventListeners(tileBlocks[i]);
+  
   tileBlocks[i].addEventListener("mousedown", function () {
     isMouseDown = true;
-    this.style.backgroundColor = colorPicker.value;
   });
 
   tileBlocks[i].addEventListener("mouseup", function () {
     isMouseDown = false;
-  });
-
-  tileBlocks[i].addEventListener("mousemove", function () {
-    if (isMouseDown) {
-      this.style.backgroundColor = colorPicker.value;
-    }
   });
 }
 
 
 //lets user paint with chosen color.
 colorPicker.addEventListener("click", function(){
-  discoMode = false;
-  disco.value = "off";
-  disco.innerHTML = "Disco mode off ";
   for(let i = 0; i < tileBlocks.length; i++){
     this.style.backgroundColor = colorPicker.value;
 }
@@ -102,25 +95,24 @@ gridRange.addEventListener("input", function(){
 
 //paints the chosen color from colorPicker, or uses discomode
 function attachPaintingEventListeners(tileBlock) {
-
   tileBlock.addEventListener("mousedown", function () {
     isMouseDown = true;
-    if (discoMode) {
+    if(discoMode){
       this.style.backgroundColor = getRandomColor();
-    } else {
+    }else{
       this.style.backgroundColor = colorPicker.value;
     }
   });
 
-  document.addEventListener("mouseup", function () {
+  tileBlock.addEventListener("mouseup", function () {
     isMouseDown = false;
   });
 
-  tileBlock.addEventListener("mousemove", function (event) {
+  tileBlock.addEventListener("mousemove", function () {
     if (isMouseDown) {
-      if (discoMode) {
+      if(discoMode){
         this.style.backgroundColor = getRandomColor();
-      } else {
+      }else{
         this.style.backgroundColor = colorPicker.value;
       }
     }
