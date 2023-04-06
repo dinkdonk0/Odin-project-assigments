@@ -19,11 +19,16 @@ const numDisplay = document.querySelector(".displayNumbers"); //DISPLAY
 const mathButtons = document.querySelectorAll("#numButton"); //All numbers
 
 const buttonClear = document.querySelector(".clear")
-
+const buttonBack = document.querySelector(".back")
 
 //clears numdisplay
 buttonClear.addEventListener("click", () =>{
     numDisplay.textContent="";
+})
+
+//removes last digit
+buttonBack.addEventListener("click", () =>{
+    numDisplay.textContent = numDisplay.textContent.slice(0,-1);
 })
 
 //adds number from buttonclick to display
