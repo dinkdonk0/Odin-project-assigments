@@ -14,5 +14,21 @@ const buttonPlus = document.querySelector(".plus");
 const buttonMinus = document.querySelector(".minus");
 const buttonMultiply = document.querySelector(".multiply");
 const buttonDivide = document.querySelector(".divide");
-const numDisplay = document.querySelector(".displayNumbers");
 
+const numDisplay = document.querySelector(".displayNumbers"); //DISPLAY
+const mathButtons = document.querySelectorAll("#numButton"); //All numbers
+
+const buttonClear = document.querySelector(".clear")
+
+
+//clears numdisplay
+buttonClear.addEventListener("click", () =>{
+    numDisplay.textContent="";
+})
+
+//adds number from buttonclick to display
+mathButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      numDisplay.textContent+=button.textContent;
+    });
+  });
