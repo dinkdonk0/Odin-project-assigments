@@ -14,3 +14,4 @@ const buttonPlus = document.querySelector(".plus");
 const buttonMinus = document.querySelector(".minus");
 const buttonMultiply = document.querySelector(".multiply");
 const buttonDivide = document.querySelector(".divide");
+const numDisplay = document.querySelector(".displayNumbers");
