@@ -1,5 +1,9 @@
 body{
     align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    background-color: #b89dc0;
   }
   
   .calculatorFrame {
@@ -8,21 +12,24 @@ body{
     flex-direction: column; /* Set flex-direction to column */
     justify-content: center;
     align-items: center;
-    background-color: rgb(197, 190, 190);
+    background-color: rgb(78, 75, 75);
     width: 20rem;
-    height: 30rem; /* adjust height as needed */
+    height: 25rem; /* adjust height as needed */
     border-radius: 1rem;
+    border: solid;
+    
   }
   
   .numberFrame {
     position: absolute; /* Add position absolute */
-    top: 0.5rem; /* Position from top */
+    top: .5rem; /* Position from top */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    background-color: rgb(170, 179, 164);
+    border: solid;
     width: 19rem;
-    height: 5rem; /* adjust height as needed */
+    height: 4rem; /* adjust height as needed */
     border-radius: 1rem;
   }
   
@@ -37,7 +44,7 @@ body{
     display: flex; /* Use grid display */
     grid-gap: 0.5rem; /* Add gap between columns */
     justify-items: center; /* Center items horizontally */ /* Center items vertically */
-    margin-top: 0rem;
+    margin-top: 4rem;
   }
 
   .buttonContainer {
@@ -59,8 +66,10 @@ body{
     cursor: pointer;
   }
   
-  #buttons{
-   
+  #topButtons{
+    width: 9rem;
+    color: black;
+    
   }
   
   .clear {
@@ -75,5 +84,5 @@ body{
   
   /* Add hover effect to buttons */
   button:hover {
-    background-color: #ccc;
+    background-color: #7e3e92;
   }
