@@ -1,0 +1,79 @@
+body{
+    align-items: center;
+  }
+  
+  .calculatorFrame {
+    position: relative; /* Add position relative */
+    display: flex;
+    flex-direction: column; /* Set flex-direction to column */
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(197, 190, 190);
+    width: 20rem;
+    height: 30rem; /* adjust height as needed */
+    border-radius: 1rem;
+  }
+  
+  .numberFrame {
+    position: absolute; /* Add position absolute */
+    top: 0.5rem; /* Position from top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    width: 19rem;
+    height: 5rem; /* adjust height as needed */
+    border-radius: 1rem;
+  }
+  
+  .displayNumbers {
+    font-size: 2rem; /* adjust font size as needed */
+    text-align: right;
+    width: 100%; /* Add width 100% to fill the parent div */
+    padding-right: 1rem; /* Add some padding to the right */
+  }
+
+  .topButtonContainer{
+    display: flex; /* Use grid display */
+    grid-gap: 0.5rem; /* Add gap between columns */
+    justify-items: center; /* Center items horizontally */ /* Center items vertically */
+    margin-top: 0rem;
+  }
+
+  .buttonContainer {
+    display: grid; /* Use grid display */
+    grid-template-columns: repeat(4, 1fr); /* Create 4 columns */
+    grid-gap: 0.5rem; /* Add gap between columns */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-top: 1rem;
+  }
+  
+  button {
+    font-size: 1.5rem; /* Increase font size */
+    width: 4rem; /* Use full width of grid cell */
+    height: 3rem; /* Use full height of grid cell */
+    border: solid;
+    border-radius: 0.5rem;
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  #buttons{
+   
+  }
+  
+  .clear {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .back {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  /* Add hover effect to buttons */
+  button:hover {
+    background-color: #ccc;
+  }
