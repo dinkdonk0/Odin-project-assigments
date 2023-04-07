@@ -21,9 +21,16 @@ const mathButtons = document.querySelectorAll("#numButton"); //All numbers
 const buttonClear = document.querySelector(".clear")
 const buttonBack = document.querySelector(".back")
 
+let num1 = 0;
+let num2 = 0;
+let operand = "";
+
 //clears numdisplay
 buttonClear.addEventListener("click", () =>{
-    numDisplay.textContent="";
+  num1=0;
+  num2=0;
+  operand = "";
+  numDisplay.textContent="";
 })
 
 //removes last digit
@@ -32,7 +39,7 @@ buttonBack.addEventListener("click", () =>{
 })
 
 //adds number from buttonclick to display
-mathButtons.forEach(button => {
+    mathButtons.forEach(button => {
     button.addEventListener("click", () => {
       numDisplay.textContent+=button.textContent;
     });
@@ -40,25 +47,70 @@ mathButtons.forEach(button => {
 
 
 
+//operator buttons
+buttonPlus.addEventListener("click", () => {
+    num1 = parseFloat(numDisplay.textContent);
+    numDisplay.textContent += "+";
+    operand = "plus";
+});
 
-  function add(num1, num2){
-    return num1+num2;
+buttonMinus.addEventListener("click", () => {
+  num1 = parseFloat(numDisplay.textContent);
+  numDisplay.textContent += "-";
+  operand = "minus";
+});
+
+/*
+TODO:
+fix multiply and divide
+*/
+/*
+buttonMultiply.addEventListener("click", () => {
+  num1 = parseFloat(numDisplay.textContent);
+  numDisplay.textContent += "*";
+  operand = "multiply";
+});
+
+
+buttonDivide.addEventListener("click", () => {
+  num1 = parseFloat(numDisplay.textContent);
+  numDisplay.textContent = "/";
+  operand = "divide";
+});
+*/
+
+//equals button
+buttonEquals.addEventListener("click", () => {
+  const numString = numDisplay.textContent.split(/[+\-]/);
+  //numString = numDisplay.textContent.split(/[*\/]/);
+  num1 = parseFloat(numString[0]);
+  num2 = parseFloat(numString[1]);
+  operate(operand);
+});
+
+function operate(operand){
+ 
+
+  if (operand === "plus"){
+    numDisplay.textContent = num1+num2;
+    
   }
-
-  function subtract(num1, num2){
-    return num1-num2;
+  if(operand === "minus"){
+    numDisplay.textContent = num1-num2;
   }
-
-  function multiply(num1, num2){
-    return num1*num2;
+  //idk if if statements below here work yet
+  if(operand === "multiply"){
+    numDisplay.textContent = num1*num2;
   }
-
-  function divide(num1, num2){
-    if(num2==0){
-        return null;
+  if(operand === "divide"){
+    if(num2!=0){
+      numDisplay.textContent = num1/num2;
     }
     else{
-    return num1/num2;
+      numDisplay.textContent="NaN";
     }
     
   }
+  return numDisplay.textContent;
+  
+}

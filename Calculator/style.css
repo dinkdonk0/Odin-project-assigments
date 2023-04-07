@@ -30,7 +30,7 @@ body{
     border: solid;
     width: 19rem;
     height: 4rem; /* adjust height as needed */
-    border-radius: 1rem;
+    border-radius: .6rem;
   }
   
   .displayNumbers {
