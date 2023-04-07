@@ -60,11 +60,7 @@ buttonMinus.addEventListener("click", () => {
   operand = "minus";
 });
 
-/*
-TODO:
-fix multiply and divide
-*/
-/*
+
 buttonMultiply.addEventListener("click", () => {
   num1 = parseFloat(numDisplay.textContent);
   numDisplay.textContent += "*";
@@ -74,43 +70,41 @@ buttonMultiply.addEventListener("click", () => {
 
 buttonDivide.addEventListener("click", () => {
   num1 = parseFloat(numDisplay.textContent);
-  numDisplay.textContent = "/";
+  numDisplay.textContent += "/";
   operand = "divide";
 });
-*/
+
 
 //equals button
 buttonEquals.addEventListener("click", () => {
-  const numString = numDisplay.textContent.split(/[+\-]/);
-  //numString = numDisplay.textContent.split(/[*\/]/);
+  let numString;
+  if (operand === "plus" || operand === "minus") {
+    numString = numDisplay.textContent.split(/[\+\-]/);
+  }
+  if (operand === "multiply" || operand === "divide") {
+    numString = numDisplay.textContent.split(/[\*\/]/);
+  }
+
   num1 = parseFloat(numString[0]);
   num2 = parseFloat(numString[1]);
-  operate(operand);
+  numDisplay.textContent = operate(operand);
 });
 
-function operate(operand){
- 
-
-  if (operand === "plus"){
-    numDisplay.textContent = num1+num2;
-    
+function operate(operand) {
+  if (operand === "plus") {
+    return num1 + num2;
   }
-  if(operand === "minus"){
-    numDisplay.textContent = num1-num2;
+  if (operand === "minus") {
+    return num1 - num2;
   }
-  //idk if if statements below here work yet
-  if(operand === "multiply"){
-    numDisplay.textContent = num1*num2;
+  if (operand === "multiply") {
+    return num1 * num2;
   }
-  if(operand === "divide"){
-    if(num2!=0){
-      numDisplay.textContent = num1/num2;
+  if (operand === "divide") {
+    if (num2 != 0) {
+      return num1 / num2;
+    } else {
+      return "NaN";
     }
-    else{
-      numDisplay.textContent="NaN";
-    }
-    
   }
-  return numDisplay.textContent;
-  
 }
