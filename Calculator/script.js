@@ -91,20 +91,17 @@ buttonEquals.addEventListener("click", () => {
 });
 
 function operate(operand) {
-  if (operand === "plus") {
-    return num1 + num2;
-  }
-  if (operand === "minus") {
-    return num1 - num2;
-  }
-  if (operand === "multiply") {
-    return num1 * num2;
-  }
-  if (operand === "divide") {
-    if (num2 != 0) {
+  switch(operand){
+    case "plus":
+      return num1 + num2;
+    case "minus":
+      return num1 - num2;
+    case "multiply":
+      return num1 * num2;
+    case "divide":
       return num1 / num2;
-    } else {
-      return "NaN";
-    }
+    
+    default:
+      return "NaN"
   }
 }
