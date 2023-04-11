@@ -1,0 +1,78 @@
+/* Use a CSS reset to remove default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Define global styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1.6rem; /* 16px equivalent */
+    line-height: 1.5;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Style the header */
+.header {
+    background-color: #4CAF50;
+    height: 4.375rem; /* 70px equivalent */
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    justify-content: left;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header__title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem; /* 2px equivalent */
+    justify-content: left;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+main {
+    background-color: #e0e0e0;
+    padding: 2rem;
+}
+
+/* Additional styles to make the design pop */
+h2 {
+    font-size: 1.875rem; /* 30px equivalent */
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+p {
+    font-size: 1.125rem; /* 18px equivalent */
+    margin-bottom: 1rem;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #4CAF50;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.125rem; /* 18px equivalent */
+    margin: 0;
+}
