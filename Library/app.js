@@ -10,10 +10,6 @@ const books = [];
 bookForm.addEventListener("submit", addBook );
 
 
-
-
-
-
 function addBook(event){
     event.preventDefault();
 
@@ -51,19 +47,34 @@ function updateBookList() {
        
        //adds classname to div (for css shenanigans)
        bookDiv.classList.add('book-item');
-
+       const deleteButton = document.createElement('button');
+       deleteButton.textContent = 'Delete book';
+       deleteButton.classList.add('book-button');
+       deleteButton.setAttribute('data-index', i);
+       //should actually be rewritten due to security concerns (innerHTML cross site scripting)
        bookDiv.innerHTML=  `
        <h3>${books[i].name}</h3>
        <p>Pages: ${books[i].pages}</p>
        <p>Read: ${books[i].hasRead ? 'Yes' : 'No'}</p>
-       <button class="book-button">Delete book</button>
         `;
-
+        deleteButton.addEventListener('click', deleteBook);
+        
+        bookDiv.appendChild(deleteButton);
         bookList.appendChild(bookDiv);
     }
 
 }
 
+function deleteBook(event) {
+    // Get the index of the book to remove from the button's data-index attribute
+    const index = event.target.getAttribute('data-index');
+    
+    // Remove the book from the books array using the index
+    books.splice(index, 1);
+    
+    // Update the book list to reflect the removed book
+    updateBookList();
+}
 
 // Add a click event listener to the button
 toggleBtn.addEventListener('click', function () {
