@@ -25,6 +25,19 @@ body {
     letter-spacing: 1px;
 }
 
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    height: 100%;
+}
+
 .gameBoard {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -33,15 +46,26 @@ body {
     width: 25rem;
     height: 25rem;
     background-color: #f1f1f1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 0.5rem;
     padding: 0.5rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
 }
 
+.restart {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #5ba2b4;
+    color: #fff;
+}
+
+.restart:hover {
+    background-color: #257eb9;
+}
 .tile {
     background-color: #ffffff;
     border: 0.15rem solid #52afbb;
@@ -60,3 +84,4 @@ body {
     background-color: #d1e1e6;
     transform: translateY(-0.25rem);
 }
+
