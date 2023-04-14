@@ -32,13 +32,12 @@ const DisplayController = (() => {
        
     }
 
-    function clearTiles(){
-        for(let i=0;i<9;i++){
-            
-            tileBlocks[i].textContent ="";
-            
+    function clearTiles() {
+        for (let i = 0; i < 9; i++) {
+          tileBlocks[i].textContent = "";
         }
-    }
+        tileBlocks = [];
+      }
 
    
 
@@ -90,7 +89,7 @@ const Game = (() => {
             [0, 4, 8],
             [2, 4, 6]
           ];
-
+          
         
     }
 
