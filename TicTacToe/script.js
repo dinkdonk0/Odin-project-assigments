@@ -33,10 +33,10 @@ const DisplayController = (() => {
     }
 
     function clearTiles() {
+        
         for (let i = 0; i < 9; i++) {
           tileBlocks[i].textContent = "";
         }
-        tileBlocks = [];
       }
 
    
