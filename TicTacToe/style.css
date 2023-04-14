@@ -8,18 +8,18 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
 }
 
 .mainHeader {
-    background-color: #ffffff;
+    background-color: #f1f1f1;
     padding: 1.25rem;
     text-align: center;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 .mainHeader h1 {
-    color: #333;
+    color: #3498db;
     font-size: 2.5rem;
     font-weight: 300;
     letter-spacing: 1px;
@@ -32,19 +32,19 @@ body {
     gap: 0.5rem;
     width: 25rem;
     height: 25rem;
-    background-color: #443e3e;
+    background-color: #f1f1f1;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 .tile {
-    background-color: #eeeabb;
-    border: 0.1rem solid #ccc;
+    background-color: #ffffff;
+    border: 0.15rem solid #52afbb;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,9 +53,10 @@ body {
     cursor: pointer;
     border-radius: 0.25rem;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .tile:hover {
-    background-color: #dfc13d;
+    background-color: #d1e1e6;
+    transform: translateY(-0.25rem);
 }
