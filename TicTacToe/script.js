@@ -22,12 +22,10 @@ const DisplayController = (() => {
     function attachEventListeners(tileBlock) {
         
         tileBlock.addEventListener("click", function(event){
-            
             if (event.target.textContent === '') {
                 // Place 'X' or 'O' depending on the current player's turn
                 event.target.textContent = Game.playerTurn().symbol;
                 Game.checkWin();
-
         } });
        
     }
@@ -42,8 +40,10 @@ const DisplayController = (() => {
    
 
     return {
+        attachEventListeners,
         generateTile,
-        clearTiles
+        clearTiles,
+        tileBlocks
     };
 })();
 
@@ -76,21 +76,38 @@ const Game = (() => {
       });
 
     function checkWin(){
-        const winningCombos = [
-            // Rows
-            [0, 1, 2],
-            [3, 4, 5],
-            [6, 7, 8],
-            // Columns
-            [0, 3, 6],
-            [1, 4, 7],
-            [2, 5, 8],
-            // Diagonals
-            [0, 4, 8],
-            [2, 4, 6]
-          ];
-          
-        
+
+     if((DisplayController.tileBlocks[0].textContent === player1.symbol && DisplayController.tileBlocks[1].textContent === player1.symbol && DisplayController.tileBlocks[2].textContent === player1.symbol) ||
+        (DisplayController.tileBlocks[3].textContent === player1.symbol && DisplayController.tileBlocks[4].textContent === player1.symbol && DisplayController.tileBlocks[5].textContent === player1.symbol) ||
+        (DisplayController.tileBlocks[6].textContent === player1.symbol && DisplayController.tileBlocks[7].textContent === player1.symbol && DisplayController.tileBlocks[8].textContent === player1.symbol) ||
+        (DisplayController.tileBlocks[0].textContent === player1.symbol && DisplayController.tileBlocks[3].textContent === player1.symbol && DisplayController.tileBlocks[6].textContent === player1.symbol) ||
+        (DisplayController.tileBlocks[1].textContent === player1.symbol && DisplayController.tileBlocks[4].textContent === player1.symbol && DisplayController.tileBlocks[7].textContent === player1.symbol) ||
+        (DisplayController.tileBlocks[2].textContent === player1.symbol && DisplayController.tileBlocks[5].textContent === player1.symbol && DisplayController.tileBlocks[8].textContent === player1.symbol) ||
+        (DisplayController.tileBlocks[0].textContent === player1.symbol && DisplayController.tileBlocks[4].textContent === player1.symbol && DisplayController.tileBlocks[8].textContent === player1.symbol) ||
+        (DisplayController.tileBlocks[2].textContent === player1.symbol && DisplayController.tileBlocks[4].textContent === player1.symbol && DisplayController.tileBlocks[6].textContent === player1.symbol)) {
+        alert(player1.name + " won!");
+        return;
+    }
+
+    if((DisplayController.tileBlocks[0].textContent === player2.symbol && DisplayController.tileBlocks[1].textContent === player2.symbol && DisplayController.tileBlocks[2].textContent === player2.symbol) ||
+    (DisplayController.tileBlocks[3].textContent === player2.symbol && DisplayController.tileBlocks[4].textContent === player2.symbol && DisplayController.tileBlocks[5].textContent === player2.symbol) ||
+    (DisplayController.tileBlocks[6].textContent === player2.symbol && DisplayController.tileBlocks[7].textContent === player2.symbol && DisplayController.tileBlocks[8].textContent === player2.symbol) ||
+    (DisplayController.tileBlocks[0].textContent === player2.symbol && DisplayController.tileBlocks[3].textContent === player2.symbol && DisplayController.tileBlocks[6].textContent === player2.symbol) ||
+    (DisplayController.tileBlocks[1].textContent === player2.symbol && DisplayController.tileBlocks[4].textContent === player2.symbol && DisplayController.tileBlocks[7].textContent === player2.symbol) ||
+    (DisplayController.tileBlocks[2].textContent === player2.symbol && DisplayController.tileBlocks[5].textContent === player2.symbol && DisplayController.tileBlocks[8].textContent === player2.symbol) ||
+    (DisplayController.tileBlocks[0].textContent === player2.symbol && DisplayController.tileBlocks[4].textContent === player2.symbol && DisplayController.tileBlocks[8].textContent === player2.symbol) ||
+    (DisplayController.tileBlocks[2].textContent === player2.symbol && DisplayController.tileBlocks[4].textContent === player2.symbol && DisplayController.tileBlocks[6].textContent === player2.symbol)) {
+    alert(player2.name + " won!");
+    return;
+}
+
+
+
+
+          if(turn ===9){
+            alert("It's a draw!");
+          }
+
     }
 
     return {
