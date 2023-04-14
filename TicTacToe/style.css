@@ -6,13 +6,13 @@ html, body, h1 {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px; /* Setting base font size for easier rem calculations */
+    font-size: 16px;
     line-height: 1.6;
-    background-color: #dbe2d29d;
+    background-color: #f4f4f4;
 }
 
 .mainHeader {
-    background-color: #eff1f3;
+    background-color: #ffffff;
     padding: 1.25rem;
     text-align: center;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
@@ -22,14 +22,40 @@ body {
     color: #333;
     font-size: 2.5rem;
     font-weight: 300;
+    letter-spacing: 1px;
 }
 
 .gameBoard {
-    width: 25rem; 
-    height: 25rem; 
-    background-color: #3333339a; 
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 25rem;
+    height: 25rem;
+    background-color: #443e3e;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.tile {
+    background-color: #eeeabb;
+    border: 0.1rem solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.tile:hover {
+    background-color: #dfc13d;
 }
