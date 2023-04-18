@@ -74,6 +74,12 @@ buttonDivide.addEventListener("click", () => {
   operand = "divide";
 });
 
+//dotButton
+buttonDot.addEventListener("click", () => {
+  
+  numDisplay.textContent += ".";
+  
+});
 
 //equals button
 buttonEquals.addEventListener("click", () => {
