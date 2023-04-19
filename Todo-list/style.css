@@ -1,0 +1,25 @@
+/* Reset some browser default styles */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0;
+}
