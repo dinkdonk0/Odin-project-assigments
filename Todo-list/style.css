@@ -30,9 +30,74 @@ h1 {
 }
 
 main {
-    margin-left: 12rem;
+    display: flex;
+    justify-content: center;
     padding: 1rem;
-    position: relative;
-    z-index: 1; /* Make sure main content is below header */
 }
 
+/* Add Task styles */
+.addTask {
+    margin-bottom: 1rem;
+    background-color:#bbb3b3ab;
+    border-radius: .3rem;
+}
+.addTask:hover{
+    background-color:#5a5454ab;
+}
+
+.addTaskTitle {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.addTaskForm {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#myTextInput {
+    flex-grow: 1;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.addTaskButtons {
+    display: flex;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    margin-left: 0.5rem;
+    margin-top: .5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:active {
+    background-color: #111;
+}
+
+button#button2 {
+    background-color: #c0392b;
+}
+
+button#button2:hover {
+    background-color: #e74c3c;
+}
+
+button#button2:active {
+    background-color: #922b21;
+}
+
+.hidden {
+    display: none;
+}
