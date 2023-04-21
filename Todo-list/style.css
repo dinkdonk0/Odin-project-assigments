@@ -108,6 +108,6 @@ button#button2:active {
     border-radius: .3rem;
 }
 
-.tasks > * :hover{
-    background-color:#5a5454ab;
+.tasks > *:hover {
+    background-color: #5a5454ab;
 }
