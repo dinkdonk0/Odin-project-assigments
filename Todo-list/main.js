@@ -22,9 +22,23 @@ function taskAdder(){
         }
     const newDiv = document.createElement('div');
     newDiv.textContent = inputValue;
+
+    const closeButton = document.createElement('span');
+    closeButton.className = 'close-button';
+    closeButton.textContent = 'X';
+    newDiv.appendChild(closeButton);
     tasks.appendChild(newDiv);
     textInput.value = "";
     swapDivs();
+}
+
+//handles removal of task div
+function handleCloseButtonClick(event) {
+    const closeButton = event.target;
+    if (closeButton.classList.contains('close-button')) {
+        const task = closeButton.parentElement;
+        tasks.removeChild(task);
+    }
 }
 
 
@@ -33,4 +47,9 @@ addTask.addEventListener("click", swapDivs);
 cancelButton.addEventListener("click", swapDivs);
 
 addButton.addEventListener("click", taskAdder);
+
+//remove task div
+tasks.addEventListener('click', handleCloseButtonClick);
+
+
 

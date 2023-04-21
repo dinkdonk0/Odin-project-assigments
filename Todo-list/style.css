@@ -37,6 +37,7 @@ main {
 
 /* Add Task styles */
 .addTask {
+    width: 30rem;
     margin-bottom: 1rem;
     background-color:#bbb3b3ab;
     border-radius: .3rem;
@@ -103,11 +104,21 @@ button#button2:active {
 }
 
 .tasks > *{
+    width: 30rem;
     margin-bottom: 0.5rem;
     background-color:#bbb3b3ab;
     border-radius: .3rem;
+    position: relative;
 }
 
-.tasks > *:hover {
-    background-color: #5a5454ab;
+.tasks > *:hover{
+    background-color:#5a5454ab;
+}
+
+.close-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
