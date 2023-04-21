@@ -101,3 +101,13 @@ button#button2:active {
 .hidden {
     display: none;
 }
+
+.tasks {
+    margin-bottom: 1rem;
+    background-color:#bbb3b3ab;
+    border-radius: .3rem;
+}
+
+.tasks:hover{
+    background-color:#5a5454ab;
+}
