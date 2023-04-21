@@ -102,12 +102,12 @@ button#button2:active {
     display: none;
 }
 
-.tasks {
-    margin-bottom: 1rem;
+.tasks > *{
+    margin-bottom: 0.5rem;
     background-color:#bbb3b3ab;
     border-radius: .3rem;
 }
 
-.tasks:hover{
+.tasks > * :hover{
     background-color:#5a5454ab;
 }
