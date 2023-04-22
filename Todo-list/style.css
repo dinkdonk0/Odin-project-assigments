@@ -3,15 +3,17 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #fafbfc;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #3071b0;
+    color: #fff;
     text-align: left;
     padding: 1rem;
     position: relative;
     z-index: 2; /* Make sure header is above sidebar */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -19,7 +21,7 @@ h1 {
 }
 
 .sidebar {
-    background-color: #ccc7c7d8;
+    background-color: #d7e4f0;
     width: 12rem;
     height: calc(100vh - 3rem); /* Subtract header height including padding */
     padding: 1rem;
@@ -27,6 +29,7 @@ h1 {
     left: 0;
     top: 3rem; /* Move sidebar below header */
     overflow-y: auto;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 main {
@@ -35,19 +38,18 @@ main {
     padding: 1rem;
 }
 
-/* Add Task styles */
 .addTask {
     width: 30rem;
     margin-bottom: 1rem;
-    background-color:#bbb3b3ab;
-    border-radius: .3rem;
+    background-color: #e8eff7;
+    border-radius: 0.3rem;
 }
-.addTask:hover{
-    background-color:#5a5454ab;
+.addTask:hover {
+    background-color: #cfdff3;
 }
 
 .addTaskTitle {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -60,8 +62,8 @@ main {
     flex-grow: 1;
     padding: 0.5rem;
     margin-right: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #cdd9e9;
+    border-radius: 0.25rem;
 }
 
 .addTaskButtons {
@@ -69,22 +71,22 @@ main {
 }
 
 button {
-    background-color: #333;
+    background-color: #3071b0;
     color: white;
     border: none;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     margin-left: 0.5rem;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     border-radius: 0.3rem;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #4089d1;
 }
 
 button:active {
-    background-color: #111;
+    background-color: #1d5185;
 }
 
 button#button2 {
@@ -103,16 +105,16 @@ button#button2:active {
     display: none;
 }
 
-.tasks > *{
+.tasks > * {
     width: 30rem;
     margin-bottom: 0.5rem;
-    background-color:#bbb3b3ab;
-    border-radius: .3rem;
+    background-color: #e8eff7;
+    border-radius: 0.3rem;
     position: relative;
 }
 
-.tasks > *:hover{
-    background-color:#5a5454ab;
+.tasks > *:hover {
+    background-color: #cfdff3;
 }
 
 .close-button {
